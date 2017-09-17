@@ -37,6 +37,7 @@ A 10.2.1 jailbreak for 64-bit devices, for all squatters and communists
 - 10.3.2+
 
 # Might support
+- 10.3
 - 10.3.1
 - 10.3.2 (When CVE-2017-7009 will be uncovered (public) or found.
 
@@ -47,8 +48,39 @@ A 10.2.1 jailbreak for 64-bit devices, for all squatters and communists
 - Security Researcher Adam Donenfeld [@doadam](http://twitter.com/doadam) for opensourcing his IOSurface and AVEncoder exploits.
 - Security Researcher Ian Beer from Google Project Zero for opensourcing his NSXPC exploit (triple_fetch).
 - Security Researcher Coolstar [@coolstarorg](http://twitter.com/coolstarorg) for his patch-unpatch idea.
-- Luca Todesco, for being a cool guy and previous jailbreaks.
+- Luca Todesco, for the Yalu102 Kernel Patches.
+- Lokihardt for his WebKit exploit that will lead to JailbreakMe 2017.
 - Karl Marx and Friedrich Engels, for creating the roots of communism.
 - Boris Slav, for his great tutorials and videos.
 - Vladimir Putin, for being a b0ss.
 - Mila432, for adding more offsets to the exploit, thanks [Mila432](http://github.com/mila432/).
+
+# Compilation instructions
+- Download the project
+- Go into the triple_fetch folder
+
+      cd triple_fetch_sdk
+      ./build.sh
+      cp ziva1 ../nsxpc2pc
+      cp ziva1 ../nsxpc2pc/pocs/
+      open ../nsxpc2pc.xcodeproj
+      
+# Problem Solving
+- Plug in your iDevice (Make Sure it is NOT Locked!)
+- Goto Window->Devices
+- Wait for the symbols to load
+- Make Sure To CHANGE your Signing team AND the name of the app id to something unique.
+- Example (com.cyka.blyat -> com.cyka.blyat.rashb)
+- Make sure you have provisioning profiles
+- Compile for the device plugged in instead of simulator
+- PROFIT??!!
+
+# To do
+- Fix the yalu102 offsets
+- Make the output of ziVA log to the debugger
+- Make the world communistic
+- For some reason my songs don't play random. Fix it and get credited. (:D)
+
+# Extra
+- If you have libimobiledevice installed you can run the debug-iphone to get a bit more debug output
+- If you have libimobiledevice installed you can run reboot-iphone to restart your iphone when the exploit fails
